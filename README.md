@@ -13,7 +13,6 @@ It is an assignment given by Microverse.  The following technologies will be imp
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
-    - [video description](#video-description)
     - [Key Features](#key-features)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
@@ -96,7 +95,8 @@ Install with below command:
 
 To run the project, execute the following in the terminal:
 
-```npm run dev
+```sh
+npm run dev
 ```
 
 <!-- AUTHORS -->
