@@ -18,9 +18,34 @@ body {
 }
 
 h1 {
-  color: #00ff;
+  color: rgb(8, 8, 15);
 }
 
+h3 {
+  margin-right: 2%;
+}
 #container {
+width: 100%;;
+}
 
+#score-ul {
+  border: 1px solid #ff909f;
+}
+
+#score-ul li {
+  list-style-type: none;
+}
+
+#add-scores {
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+#btn-submit {
+  align-self: flex-start;
+}
+
+input {
+  padding: 2%;
+  margin-bottom: 2%;
 }

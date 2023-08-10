@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- <link rel="stylesheet" href="./styles/style.css"> -->
-  <title><%= htmlWebpackPlugin.options.title%></title>
+  <title>Leaderboard</title>
 </head>
 <body>
-  <section id = "container-wrapper" class="flex-col">
-    <h1>Leaderboard</h1>
+  <h1>Leaderboard</h1>
+  <section id = "container-wrapper" class="flex-row">
     <div id="container" class="flex-row">
-      <div id="display-scores">
-        <div id="score-heading" class="flex-col">
+      <div id="display-scores" class="flex-col">
+        <div id="score-heading" class="flex-row">
           <h3>Recent scores</h3>
           <button id="btn-refresh">Refresh</button>
         </div>
