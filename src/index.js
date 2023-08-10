@@ -1,5 +1,5 @@
 // index.js
-import './styles/style.css'
+import './styles/style.css';
 import { newScore, populateScores } from './modules/add.js';
 
 // Add an event listener to the 'submit' button to trigger the newScore function

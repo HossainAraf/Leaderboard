@@ -2,11 +2,11 @@
 export const newScore = () => {
   const nameInput = document.querySelector('#input-name');
   const scoreInput = document.querySelector('#input-score');
-  
   const name = nameInput.value;
   const score = scoreInput.value;
 
   if (name === '' || score === '') {
+    // eslint-disable-next-line no-alert
     alert('Please provide both name and score.');
     return;
   }
@@ -30,12 +30,12 @@ export const populateScores = () => {
   // Here, you should iterate through your score data and create list items
   // For simplicity, let's use some sample data
   const scores = [
-    { name: '', score:  0 },
-    { name: '', score:  0},
+    { name: '', score: 0 },
+    { name: '', score: 0 },
 
   ];
 
-  scores.forEach(score => {
+  scores.forEach((score) => {
     const li = document.createElement('li');
     li.textContent = `${score.name}: ${score.score}`;
     scoreUl.appendChild(li);
