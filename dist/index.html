@@ -3,16 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="./styles/style.css"> -->
   <title>webpack App</title>
-<script defer src="bundlee4327f4b650089cefc45.js"></script></head>
+<script defer src="bundle55789f10fe8435cab538.js"></script></head>
 <body>
-  <div class="container">
-    <h3>Don't Laugh Challange</h3>
-    <div id="joke" class="joke">
-      <img src="" alt="" id="tw">
-
+  <section id = "container-wrapper">
+    <div id="container">
+      <h1>Leaderboard</h1>
+      <div id="display-scores">
+        <div id="score-heading" class="flex-row">
+          <h3>Recent scores</h3>
+          <button id="btn-refresh">Refresh</button>
+        </div>
+        <ul id="score-ul">
+          <!-- scores will be rendered here-->
+        </ul>
+      </div>
+      <div id="add-scores">
+        <input id="input-name" class="input-name" type="text" placeholder="Your name">
+        <input id="input-score" class="input-score" type="text" placeholder="Your score">
+        <button id="submit">Submit</button>
+      </div>
     </div>
-    <button id="jokeBtn" class="btn">Get another joke</button>
-  </div>
+  </section>
+
+  <!-- script -->
+  <script type="module" src="./index.js"></script>
 </body>
 </html>
