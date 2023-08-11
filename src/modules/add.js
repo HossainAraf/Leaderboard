@@ -17,6 +17,8 @@ export const newScore = () => {
   const scoreUl = document.querySelector('#score-ul');
   scoreUl.appendChild(li);
 
+  li.classList.add(scoreUl.children.length % 2 === 0 ? 'even' : 'odd');
+
   // Clear input fields
   nameInput.value = '';
   scoreInput.value = '';
@@ -27,11 +29,9 @@ export const populateScores = () => {
   // Clear the existing list
   scoreUl.innerHTML = '';
 
-  // Here, you should iterate through your score data and create list items
-  // For simplicity, let's use some sample data
+  // iterate through score data and create list items
   const scores = [
-    { name: '', score: 0 },
-    { name: '', score: 0 },
+    { name: 'Name-1', score: 10 },
 
   ];
 
