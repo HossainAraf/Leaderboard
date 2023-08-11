@@ -1,11 +1,9 @@
-console.log(123);
-
-import generateJoke from "./generateJoke";
-import './styles/main.scss';
+// index.js
 import './styles/style.css';
-import twitter from './img/twitter.svg';
+import { newScore, populateScores } from './modules/add.js';
 
-const twit = document.querySelector('#tw');
-twit.src = twitter;
+// Add an event listener to the 'submit' button to trigger the newScore function
+document.querySelector('#submit').addEventListener('click', newScore);
 
-console.log(generateJoke());
+// Add an event listener to the 'Refresh' button to populate scores
+document.querySelector('#btn-refresh').addEventListener('click', populateScores);

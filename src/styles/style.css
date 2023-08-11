@@ -1,0 +1,74 @@
+body {
+  margin: 2%;
+  padding: 5%;
+  color: #030303;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  color: rgb(8, 8, 15);
+  padding-left: 20%;
+}
+
+h4 {
+  margin-right: 5%;
+}
+
+#container {
+  width: 100%;
+}
+
+#score-heading {
+  width: 100%;
+}
+
+#score-ul {
+  border: 1px solid #030303;
+  min-width: 15rem;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#score-ul li {
+  list-style-type: none;
+  width: 100%;
+}
+
+#add-scores {
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+#submit {
+  align-self: flex-end;
+}
+
+input {
+  padding: 2%;
+  margin-bottom: 5%;
+}
+
+.odd {
+  background-color: #fff;
+}
+
+.even {
+  background-color: rgb(167, 138, 194);
+}

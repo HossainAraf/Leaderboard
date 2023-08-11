@@ -3,16 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= htmlWebpackPlugin.options.title%></title>
+  <!-- <link rel="stylesheet" href="./styles/style.css"> -->
+  <title>Leaderboard</title>
 </head>
 <body>
-  <div class="container">
-    <h3>Don't Laugh Challange</h3>
-    <div id="joke" class="joke">
-      <img src="" alt="" id="tw">
-
+  <h1>Leaderboard</h1>
+  <section id = "container-wrapper" class="flex-row">
+    <div id="container" class="flex-row">
+      <div id="display-scores" class="flex-col">
+        <div id="score-heading" class="flex-row">
+          <h4>Recent scores</h4>
+          <button id="btn-refresh">Refresh</button>
+        </div>
+        <ul id="score-ul">
+          <!-- scores will be rendered here-->
+        </ul>
+      </div>
+      <div id="add-scores" class="flex-col">
+        <h4>Add your score</h4>
+        <input id="input-name" class="input-name" type="text" placeholder="Your name">
+        <input id="input-score" class="input-score" type="text" placeholder="Your score">
+        <button id="submit">Submit</button>
+      </div>
     </div>
-    <button id="jokeBtn" class="btn">Get another joke</button>
-  </div>
+  </section>
+
+  <!-- script -->
+  <script type="module" src="./index.js"></script>
 </body>
 </html>
