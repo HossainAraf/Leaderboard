@@ -56,8 +56,8 @@ h4 {
   justify-content: space-around;
 }
 
-#btn-submit {
-  align-self: flex-start;
+#submit {
+  align-self: flex-end;
 }
 
 input {
