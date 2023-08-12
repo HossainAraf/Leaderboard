@@ -3,32 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link rel="stylesheet" href="./styles/style.css"> -->
   <title>Leaderboard</title>
 </head>
 <body>
-  <h1>Leaderboard</h1>
-  <section id = "container-wrapper" class="flex-row">
-    <div id="container" class="flex-row">
-      <div id="display-scores" class="flex-col">
-        <div id="score-heading" class="flex-row">
-          <h4>Recent scores</h4>
-          <button id="btn-refresh">Refresh</button>
-        </div>
-        <ul id="score-ul">
-          <!-- scores will be rendered here-->
-        </ul>
-      </div>
-      <div id="add-scores" class="flex-col">
-        <h4>Add your score</h4>
-        <input id="input-name" class="input-name" type="text" placeholder="Your name">
-        <input id="input-score" class="input-score" type="text" placeholder="Your score">
-        <button id="submit">Submit</button>
-      </div>
-    </div>
-  </section>
+      <h1>Leaderboard</h1>
+  <div id="container-wrapper">
+  <div id="container" class="flex-row">
+      <div>
+          <div class="flex-row"> 
+            <h4 id="heading">Recent Scores </h4>  
+       <button id="refresh">Refresh</button>
+          </div>
+          <ul id="score-ul">
 
-  <!-- script -->
-  <script type="module" src="./index.js"></script>
+          </ul>
+      </div>
+          <form id="add-new" class="flex-col">
+              <label for="name">Full Name</label>
+              <input type="text" name="name" id="name" placeholder="Please write your name">
+              <label for="score">Your Score</label>
+              <input type="number" name="score" id="score" placeholder="Your score">
+              <button id="submit">Submit</button>
+              </form>
+  </div>
+</div>
+<script type="module" src="./index.js"></script>
 </body>
 </html>
