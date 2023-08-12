@@ -5,6 +5,7 @@ const dynamicDisplay = document.querySelector('#score-ul');
 const refreshButton = document.querySelector('#refresh');
 
 const displayScores = (scores) => {
+  scores.sort((a, b) => b.score - a.score);
   dynamicDisplay.innerHTML = '';
 
   scores.forEach((score) => {
