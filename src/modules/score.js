@@ -1,6 +1,29 @@
 const form = document.querySelector('#add-new');
 const gameId = localStorage.getItem('gameId');
 
+const dynamicDisplay = document.querySelector('#score-ul');
+const refreshButton = document.querySelector('#refresh');
+
+const displayScores = (scores) => {
+  dynamicDisplay.innerHTML = '';
+
+  scores.forEach((score) => {
+    const scoreElement = document.createElement('div');
+    scoreElement.innerHTML = `${score.user}: ${score.score}`;
+    dynamicDisplay.appendChild(scoreElement);
+  });
+};
+
+const refreshScores = async () => {
+  try {
+    const response = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameId}/scores`);
+    const data = await response.json();
+    displayScores(data.result);
+  } catch (error) {
+    // Handle errors here if needed
+  }
+};
+
 const submitForm = async (event) => {
   event.preventDefault();
 
@@ -20,13 +43,13 @@ const submitForm = async (event) => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          name: 'Soccer LeadorBoard',
+          name: 'Soccer Leaderboard',
         }),
       });
 
       const createData = await createResponse.json();
-      const [, gameId] = createData.result.match(/ID: (\w+)/);
-      localStorage.setItem('gameId', gameId);
+      const [, newGameId] = createData.result.match(/ID: (\w+)/);
+      localStorage.setItem('gameId', newGameId);
     }
 
     const scoresResponse = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameId}/scores`, {
@@ -38,35 +61,9 @@ const submitForm = async (event) => {
     });
     await scoresResponse.json();
   } catch (error) {
-    const container = document.querySelector('#container');
-    container.innerHTML = 'Error';
+    // Handle errors here if needed
+
   }
-};
-
-// Display data
-
-const dynamicDisplay = document.querySelector('#score-ul');
-const refreshButton = document.querySelector('#refresh');
-
-const refreshScores = async () => {
-  try {
-    const response = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameId}/scores`);
-    const data = await response.json();
-    displayScores(data.result);
-  } catch (error) {
-    const container = document.querySelector('#container');
-    container.innerHTML = 'Error';
-  }
-};
-
-const displayScores = (scores) => {
-  dynamicDisplay.innerHTML = '';
-
-  scores.forEach((score) => {
-    const scoreElement = document.createElement('div');
-    scoreElement.innerHTML = `${score.user}: ${score.score}`;
-    dynamicDisplay.appendChild(scoreElement);
-  });
 };
 
 refreshButton.addEventListener('click', refreshScores);
