@@ -31,7 +31,7 @@
 # 📖 Leaderboard:  <a name="about-project"></a>
 
 >
-<!-- # 📗 [Live Demo](https://hossainaraf.github.io/Leaderboard-Mobile-First/) -->
+<!-- # 📗 [Live Demo](https://hossainaraf.github.io/Leaderboard) -->
 ## 🛠 Built With <a name="built-with"></a>
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -116,7 +116,6 @@ npm run dev
 > Describe 1 - 3 features you will add to the project.
 - [ ] Add footer
 - [ ] Add more pages
-- [ ] Add API
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

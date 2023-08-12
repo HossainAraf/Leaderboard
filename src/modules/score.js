@@ -58,6 +58,7 @@ const refreshScores = async () => {
     // eslint-disable-next-line no-use-before-define
     displayScores(data.result);
   } catch (error) {
+    // eslint-disable-next-line no-alert
     alert('Error fetching scores:', error);
   }
 };
