@@ -37,10 +37,9 @@ const submitForm = async (event) => {
       body: JSON.stringify(data),
     });
     await scoresResponse.json();
-
-    // alert('score posted successfully');
   } catch (error) {
-    // alert('Something went wrong');
+    const container = document.querySelector('#container');
+    container.innerHTML = 'Error';
   }
 };
 
@@ -53,13 +52,10 @@ const refreshScores = async () => {
   try {
     const response = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameId}/scores`);
     const data = await response.json();
-    // eslint-disable-next-line no-alert
-    alert('Score received:', data);
-    // eslint-disable-next-line no-use-before-define
     displayScores(data.result);
   } catch (error) {
-    // eslint-disable-next-line no-alert
-    alert('Error fetching scores:', error);
+    const container = document.querySelector('#container');
+    container.innerHTML = 'Error';
   }
 };
 
