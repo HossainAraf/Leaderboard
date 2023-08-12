@@ -1,7 +1,8 @@
 body {
   margin: 2%;
   padding: 5%;
-  color: #030303;
+  color: #fff;
+  background-color: #444654;
 }
 
 .flex-row {
@@ -18,6 +19,7 @@ body {
 }
 
 h1 {
+  font-family: Brush Script MT, cursive;
   color: rgb(8, 8, 15);
   padding-left: 20%;
 }
@@ -35,20 +37,30 @@ h4 {
 }
 
 #score-ul {
-  border: 1px solid #030303;
+  border: 1px solid #f3f3;
   min-width: 15rem;
   min-height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding: 2%;
+  padding-right: 5%;
+}
+
+li:nth-child(even) {
+  background-color: #f0bcbc;
+}
+
+li:nth-child(odd) {
+  background-color: #fff;
 }
 
 #score-ul li {
   list-style-type: none;
   width: 100%;
+  color: #020202;
+  padding: 2%;
 }
 
 #add-scores {
@@ -56,19 +68,28 @@ h4 {
   justify-content: space-around;
 }
 
-#submit {
-  align-self: flex-end;
-}
-
 input {
   padding: 2%;
   margin-bottom: 5%;
 }
 
-.odd {
-  background-color: #fff;
+#refresh,
+#submit {
+  border-radius: 5%;
+  box-shadow: 4px -3px teal;
 }
 
-.even {
-  background-color: rgb(167, 138, 194);
+#submit {
+  align-self: flex-end;
+}
+
+label {
+  color: #fff;
+}
+
+#temp-text {
+  text-align: center;
+  font-weight: 100;
+  text-decoration: wavy;
+  width: 100%;
 }
