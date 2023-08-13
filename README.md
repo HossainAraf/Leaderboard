@@ -10,6 +10,7 @@
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
+- [📖 Live Demo](#live-demo)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
@@ -30,8 +31,7 @@
 
 # 📖 Leaderboard:  <a name="about-project"></a>
 
->
-<!-- # 📗 [Live Demo](https://hossainaraf.github.io/Leaderboard) -->
+# 📗 [Live Demo](https://hossainaraf.github.io/Leaderboard)
 ## 🛠 Built With <a name="built-with"></a>
 ### Tech Stack <a name="tech-stack"></a>
 
